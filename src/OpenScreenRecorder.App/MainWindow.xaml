@@ -1,0 +1,21 @@
+﻿<Window x:Class="OpenScreenRecorder.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="OpenScreen Recorder" Height="220" Width="560">
+  <Grid Margin="16">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <TextBlock FontSize="18" FontWeight="SemiBold" Text="OpenScreen Recorder"/>
+    <TextBlock Grid.Row="1" Margin="0,8,0,0" Text="{Binding Status}" />
+
+    <StackPanel Grid.Row="2" Margin="0,16,0,0" Orientation="Horizontal">
+      <Button Width="140" Margin="0,0,8,0" Content="Pick Source" Click="PickSource_Click"/>
+      <Button Width="140" Margin="0,0,8,0" Content="Start" Click="Start_Click"/>
+      <Button Width="140" Content="Stop" Click="Stop_Click"/>
+    </StackPanel>
+  </Grid>
+</Window>

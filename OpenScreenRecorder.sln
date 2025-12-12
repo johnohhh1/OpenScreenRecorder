@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B7809EED-4450-40B4-BB20-C76EBDDB6474}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenScreenRecorder.App", "src\OpenScreenRecorder.App\OpenScreenRecorder.App.csproj", "{A1F2B05F-2BCE-4948-A707-44DF4E4075F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenScreenRecorder.Core", "src\OpenScreenRecorder.Core\OpenScreenRecorder.Core.csproj", "{30C6D4F0-181E-48C0-BC27-4964A1A710A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1F2B05F-2BCE-4948-A707-44DF4E4075F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1F2B05F-2BCE-4948-A707-44DF4E4075F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1F2B05F-2BCE-4948-A707-44DF4E4075F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1F2B05F-2BCE-4948-A707-44DF4E4075F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30C6D4F0-181E-48C0-BC27-4964A1A710A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30C6D4F0-181E-48C0-BC27-4964A1A710A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30C6D4F0-181E-48C0-BC27-4964A1A710A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30C6D4F0-181E-48C0-BC27-4964A1A710A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A1F2B05F-2BCE-4948-A707-44DF4E4075F8} = {B7809EED-4450-40B4-BB20-C76EBDDB6474}
+		{30C6D4F0-181E-48C0-BC27-4964A1A710A0} = {B7809EED-4450-40B4-BB20-C76EBDDB6474}
+	EndGlobalSection
+EndGlobal
