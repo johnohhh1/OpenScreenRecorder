@@ -57,4 +57,4 @@ John Olenski (@johnohhh1)
 
 ---
 
-*Built because sometimes the best response to a paywall is "hold my beer."*
+*Built because sometimes the best response to a paywall is "hold my coca-cola classic."*
