@@ -8,16 +8,17 @@ Because paying $12.99/month for a screen recorder from a sketchy SaaS company is
 
 ## Features
 
-- Native Windows screen capture using Windows.Graphics.Capture
-- Direct3D 11 hardware acceleration
-- Built with .NET 8 and WPF
-- Clean, simple interface
+- Record any display or window to MP4 (H.264) with hardware encoding
+- System audio + microphone capture with click highlight overlay
+- Automatic MP4 output to `Videos/OpenScreenRecorder`
+- Simple UI: Pick source, Record, Stop
+- Built with .NET 9, WPF, and Media Foundation (via ScreenRecorderLib)
 - No data collection, no subscriptions, no BS
 
 ## Requirements
 
 - Windows 10/11
-- .NET 8.0 Runtime
+- .NET 9 SDK (or runtime) installed
 - DirectX 11 compatible GPU
 
 ## Building
@@ -25,8 +26,21 @@ Because paying $12.99/month for a screen recorder from a sketchy SaaS company is
 ```bash
 git clone https://github.com/johnohhh1/OpenScreenRecorder.git
 cd OpenScreenRecorder
-dotnet build
+dotnet build OpenScreenRecorder.sln
 ```
+
+Run the WPF app from Visual Studio or:
+
+```bash
+dotnet run --project src/OpenScreenRecorder.App
+```
+
+## Usage
+
+- Launch the app, pick a display/window from the drop-down.
+- Hit **Record**.
+- Hit **Stop** when done.
+- Click **Open File** or **Show in Folder** to see your recording.
 
 ## Architecture
 

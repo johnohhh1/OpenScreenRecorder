@@ -1,4 +1,5 @@
 using System.Runtime.InteropServices;
+using Vortice.Direct3D;
 using Vortice.Direct3D11;
 using Vortice.DXGI;
 using Windows.Graphics.DirectX.Direct3D11;
@@ -11,9 +12,8 @@ internal static class D3D11Device
     public static IDirect3DDevice Create()
     {
         using var d3d = D3D11.D3D11CreateDevice(
-            null,
-            DriverType.Hardware,
-            DeviceCreationFlags.BgraSupport);
+            driverType: DriverType.Hardware,
+            flags: DeviceCreationFlags.BgraSupport);
 
         using var dxgiDevice = d3d.QueryInterface<IDXGIDevice>();
 

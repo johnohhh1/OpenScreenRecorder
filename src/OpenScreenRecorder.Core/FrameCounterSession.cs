@@ -11,10 +11,15 @@ internal sealed class FrameCounterSession : IDisposable
     private IDirect3DDevice? _device;
     private Direct3D11CaptureFramePool? _framePool;
     private GraphicsCaptureSession? _session;
+    private Windows.Graphics.SizeInt32 _currentSize;
 
     public int FramesCaptured { get; private set; }
 
-    public FrameCounterSession(GraphicsCaptureItem item) => _item = item;
+    public FrameCounterSession(GraphicsCaptureItem item)
+    {
+        _item = item;
+        _currentSize = item.Size;
+    }
 
     public void Start()
     {
@@ -24,7 +29,7 @@ internal sealed class FrameCounterSession : IDisposable
             _device,
             DirectXPixelFormat.B8G8R8A8UIntNormalized,
             2,
-            _item.Size);
+            _currentSize);
 
         _framePool.FrameArrived += OnFrameArrived;
 
@@ -38,10 +43,10 @@ internal sealed class FrameCounterSession : IDisposable
         FramesCaptured++;
 
         // Handle resizing
-        if (frame.ContentSize.Width != _item.Size.Width || frame.ContentSize.Height != _item.Size.Height)
+        if (frame.ContentSize.Width != _currentSize.Width || frame.ContentSize.Height != _currentSize.Height)
         {
             // Update stored size
-            _item.Size = frame.ContentSize;
+            _currentSize = frame.ContentSize;
             sender.Recreate(_device!, DirectXPixelFormat.B8G8R8A8UIntNormalized, 2, frame.ContentSize);
         }
     }
